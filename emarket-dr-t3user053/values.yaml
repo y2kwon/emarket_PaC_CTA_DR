@@ -65,14 +65,14 @@ global:
       db: KeycloakDb        # Keycloak DB
   mongo:
     locations:
-      database: LocationsDb
-      #database: LocationsDb?replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false
+      #database: LocationsDb
+      database: LocationsDb?replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false
     marketing:
-      database: MarketingDb
-      #database: MarketingDb?replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false
+      #database: MarketingDb
+      database: MarketingDb?replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false
     webhooksnode:
-      database: WebhooksnodeDb
-      #database: WebhooksnodeDb?replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false
+      #database: WebhooksnodeDb
+      database: WebhooksnodeDb?replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false
   redis:
     sentinel:
       master:                     # Redis masterSet name. Allowed values: keep it blank if values of redis.archictecture is standalone
