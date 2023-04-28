@@ -21,8 +21,8 @@ global:
     ## @param global.app.url route53 url's for default and tenant app 
     ##
     url:
-      default: cta-emarket.<<YOUR_DOMAIN>>
-      domain: .<<YOUR_DOMAIN>>
+      default: cta-emarket.msp-t3-y2kwon.click
+      domain: .msp-t3-y2kwon.click
   ## @param global.env.kubernetes.enabled to enable the deployment cluster env
   ##
   image:
@@ -105,7 +105,7 @@ global:
   sql:
     ## @param global.sql.host AWS RDS service endpoint
     ##
-    host: <<mariadb_endpoint>>
+    host: mariadb-cta-emarket-dr.c6hkyaee7gvn.us-west-2.rds.amazonaws.com
     ## @param global.sql.port AWS RDS service port
     ##
     port: 5306
@@ -117,17 +117,17 @@ global:
       pid: Developer
   mongo:
     architecture: standalone
-    host: nosql-data
-    hostReplicaset: nosql-data-headless
-    hostArbiter: nosql-data-arbiter-headless
-    #host: mongoadmin:<<db_user_password>>@<<docdb_endpoint>>:27017
+    #host: nosql-data
+    #hostReplicaset: nosql-data-headless
+    #hostArbiter: nosql-data-arbiter-headless
+    host: mongoadmin:upcHPIjgjN@docdb-2023-04-28-07-01-13.cluster-c6hkyaee7gvn.us-west-2.docdb.amazonaws.com:27017
   redis:
     architecture: standalone
     ## @param global.redis.stanalone AWS ElastiCache Service Configuration
     ##
     standalone:
       port: 8379
-      svc: <<redis_cluster_endpoint>>
+      svc: cta-emarket-redis-dr.a7pgpn.ng.0001.usw2.cache.amazonaws.com
   eventbus:
       svc:  rabbitmq
       constr:  rabbitmq
