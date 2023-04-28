@@ -113,7 +113,7 @@ global:
       ## @param global.sql.common.user AWS RDS service username
       ##
       user: admin
-      pwd: <<db_user_password>>
+      pwd: upcHPIjgjN
       pid: Developer
   mongo:
     architecture: standalone
